@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html ng-app="MyModule">
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+    <script src="../../scripts/angular.js"></script>
+
+</head>
+<body>
+
+    <script>
+        var module = angular.module("MyModule", []);
+
+        module.controller("MyController", function ($scope) {
+            $scope.value = "4.557693";
+        });
+    </script>
+    <div ng-controller="MyController">
+
+        <h3> Reduce the number of decimal places by 2 using number filter number=4.557693 </h3>
+        <p>{{value | number:2}} </p>
+    </div>
+
+</body>
+</html>
+
